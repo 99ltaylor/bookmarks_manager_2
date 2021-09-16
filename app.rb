@@ -13,7 +13,9 @@ class BookmarkManager < Sinatra::Base
   end 
 
   get '/bookmarks' do
-    @bookmarks = Bookmark.all
+    @bookmarks = Bookmark.all # should return a list (array) of Bookmark instances
+    # bookmark = @bookmarks.first
+    # bookmark.title
     erb :index
   end
 
